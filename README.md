@@ -32,4 +32,4 @@ model.py --> ML related computional functions and reading all the input files
 procfile & requirements.txt --> heroku deployment related files
 
 This project is deployed under heroku website in the below link:
-https://dashboard.heroku.com/apps/recommendation-system-capstone
+https://sentimentbasedrecomapi.herokuapp.com/
