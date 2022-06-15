@@ -33,7 +33,8 @@ def predict(username):
         top20_products = pd.merge(top20_product_ids, product_map, on='id')
 
         # Mapping product with product reviews
-        product_mapping_review = pd.DataFrame(sentiment_clean_df[['id','text_data','user_sentiment']]).drop_duplicates()
+        product_mapping_review = pd.DataFrame(sentiment_clean_df[['id','processed_text','sentiment']]).drop_duplicates()
+        product_mapping_review.columns = ['id', 'text_data','user_sentiment']
         product_review_data =pd.merge(top20_products, product_mapping_review, on='id')
 
         # get features using tfidf vectorizer
